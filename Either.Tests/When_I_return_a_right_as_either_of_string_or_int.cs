@@ -1,7 +1,7 @@
 using Machine.Specifications;
 
 namespace Either.Tests {
-    [Subject(typeof (Either))]
+    [Subject(typeof (Either<string,int>))]
     public class When_I_return_a_right_as_either_of_string_or_int {
         static Either<string, int> _either;
 
@@ -11,6 +11,6 @@ namespace Either.Tests {
             () => _either.Match(s => 0, i => i).ShouldEqual(2);
 
         It should_return_a_right =
-            () => _either.IsRight.ShouldBeTrue();
+            () => _either.IsRight().ShouldBeTrue();
     }
 }

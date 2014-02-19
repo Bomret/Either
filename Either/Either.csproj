@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applicators.cs" />
+    <Compile Include="Combinators.cs" />
     <Compile Include="Either.cs" />
     <Compile Include="Left.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
